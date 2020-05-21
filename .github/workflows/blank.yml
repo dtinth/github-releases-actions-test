@@ -1,0 +1,10 @@
+name: On release
+on:
+  release:
+    types:
+      - created
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.release.tag_name }}
